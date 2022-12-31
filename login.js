@@ -9,9 +9,9 @@ var vm = function () {
 
             "cliente": [{ email: 'gui@mail.com', pass: '123' },],
 
-            'loja': [],
+            'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech' }],
 
-            'estafeta': [],
+            'estafeta': [{ email: 'E456@hotmail.com', pass: '456' }],   
 
         };
 
@@ -39,7 +39,10 @@ var vm = function () {
         console.log(self.contas);
 
 
-        var para='0'
+    var para = '0';
+    var erro = '0';
+    var pop = '0';
+
 
 
         self.login = function () {
@@ -49,17 +52,18 @@ var vm = function () {
                 if (self.contas.cliente[i].email == $("#email").val() && self.contas.cliente[i].pass == $("#password").val()) {
                     window.location.href = window.location.href.replace("Login.html","index.html")
                 }
-                else {
-                    if (self.para == '1') {
+                if (self.contas.cliente[i].email != $("#email").val() || self.contas.cliente[i].pass != $("#password").val()) {
+                    if (pop == '1') {
                         $("#erro").modal('show');
                     }
-                    else {
-                        para = '1';
-                    }
+                    erro = '1';
                 }
 
                     
 
+            }
+            if (erro == '1') {
+                pop = '1';
             }
 
         }
