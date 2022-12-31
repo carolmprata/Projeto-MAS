@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>fnak</title>
+    <title>Fnak</title>
+    <link href="Imagens/fnaklogo.png" rel="shortcut icon"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
@@ -21,127 +20,40 @@
 </head>
 
 <body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400);">
-    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3">
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#" style="padding-top: 0px;padding-right: 0px;padding-bottom: 0px;margin-right: 4px;padding-left: 0px;margin-left: 2px;"><img width="78" height="84" src="Imagens/Fnack.jpeg"></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navcol-5">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor">
-                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                                <path d="M575.8 255.5C575.8 273.5 560.8 287.6 543.8 287.6H511.8L512.5 447.7C512.5 450.5 512.3 453.1 512 455.8V472C512 494.1 494.1 512 472 512H456C454.9 512 453.8 511.1 452.7 511.9C451.3 511.1 449.9 512 448.5 512H392C369.9 512 352 494.1 352 472V384C352 366.3 337.7 352 320 352H256C238.3 352 224 366.3 224 384V472C224 494.1 206.1 512 184 512H128.1C126.6 512 125.1 511.9 123.6 511.8C122.4 511.9 121.2 512 120 512H104C81.91 512 64 494.1 64 472V360C64 359.1 64.03 358.1 64.09 357.2V287.6H32.05C14.02 287.6 0 273.5 0 255.5C0 246.5 3.004 238.5 10.01 231.5L266.4 8.016C273.4 1.002 281.4 0 288.4 0C295.4 0 303.4 2.004 309.5 7.014L564.8 231.5C572.8 238.5 576.9 246.5 575.8 255.5L575.8 255.5z"></path>
-                            </svg>&nbsp; Home
-                        </a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fas fa-tools"></i>&nbsp; Meus serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="far fa-question-circle"></i>&nbsp; FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="far fa-user" style="font-size: 16px;"></i>&nbsp; Conta</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container text-start py-4 py-xl-5">
-        <div class="row mb-5">
-            <div class="col-xxl-3 offset-xxl-0"><input type="text" style="padding-right: 0px;margin-right: 0px;width: 295.8px;height: 40px;"></div>
-            <div class="col-xxl-3">
-                <select class="form-select-lg">
-                    <option value="undefined">Todos os serviços</option>
-                    <option value="12" selected="">Manutenção</option>
-                    <option value="13">Reparação</option>
-                </select>
-            </div>
-            <div class="col-xxl-3">
-                <button class="btn btn-primary" type="button" style="color: var(--bs-white);">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 23px;">
-                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                        <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"></path>
-                    </svg>&nbsp; A minha localização
-                </button>
-            </div>
-            <div class="col">
-                <select class="form-select-lg">
-                    <optgroup label="Ordenar">
-                        <option value="12">Ordenar por nome</option>
-                        <option value="13">Ordernar por classificação</option>
-                    </optgroup>
-                </select>
-            </div>
-        </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col-xxl-6">
-                <div class="card">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/1a7774781860b9bd3d9352b9a8949ece.png" width="634" height="200">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção</p>
-                        <h4 class="card-title">CHIP 7</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="far fa-star" style="font-size: 19px;"></i>5.0</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-6">
-                <div class="card">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/50b75e6e1d9fd25c7b1fae0684a33be4.jpg">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção<br></p>
-                        <h4 class="card-title">New Point</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex">
-                            <div></div>
-                        </div>
-                        <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="far fa-star" style="font-size: 20px;"></i>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container py-4 py-xl-5">
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col-xxl-6">
-                <div class="card">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/22bddda6cbf89eddf4e03b3b9c008cd5.jpg" width="634" height="200">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção</p>
-                        <h4 class="card-title">Inforlandia</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex">
-                            <div>
-                                <p class="fw-bold mb-0"><i class="far fa-star" style="font-size: 20px;"></i>4.0</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xxl-6">
-                <div class="card">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/IMG_20151023_182518.jpg">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Manutenção<br></p>
-                        <h4 class="card-title">Laser Net</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="far fa-star" style="font-size: 20px;"></i>3.2</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
+    <header class="pt-5">
+        <div class="container pt-4 pt-xl-5">
+            <div class="row pt-5">
+                <div class="col-md-8 text-center text-md-start mx-auto">
+                    <div class="text-center">
+                        <h2 class="display-4 fw-bold mb-5"> Bem-vindo à Fnak!<br> A melhor plataforma para cuidar dos seus dispositivos eletrónicos.</h2>
+                        <h6> Aqui poderá encontrar as lojas que se encontram mais perto de si para reparar o seu dispositivo, podendo nem ser preciso sair de casa e com toda a confiança.</h6>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
     <footer class="text-center bg-dark">
         <div class="container text-white py-4 py-lg-5">
-            <a class="link-light" href="aderir.html"><i class="fas fa-store-alt"></i>Aderir á FNAK</a>
-            <p class="text-muted mb-0">Fnak © 2022 Brand</p>
+            <a class="link-light" href="aderir.html"><i class="fa fa-store-alt"></i>Aderir á FNAK</a>
+            <p class="text-muted mb-0">Fnak 2022 Brand</p>
         </div>
     </footer>
+
 </body>
 
 </html>
