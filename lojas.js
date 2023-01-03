@@ -5,7 +5,6 @@ var vm = function () {
 
         var self = this;
 
-      
         self.contas = {
 
             "cliente": [{ email: 'gui@mail.com', pass: '123', msg:'', nome:'Guilherme', tel:'9865742' }],
@@ -14,6 +13,9 @@ var vm = function () {
    
 
         };
+
+
+
 
     
 
@@ -68,7 +70,7 @@ var vm = function () {
 
         }
 
-
+   
 
 
     console.log("VM initialized!");

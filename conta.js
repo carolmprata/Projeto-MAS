@@ -5,15 +5,15 @@ var vm = function () {
 
         var self = this;
 
+
     self.contas = {
 
-        "cliente": [{ email: 'gui@mail.com', pass: '123' },],
+        "cliente": [{ email: 'gui@mail.com', pass: '123', msg: '', nome: 'Guilherme', tel: '9865742' }],
 
-        'loja': [{email: 'Chip7@gmail.com', pass: 'infotech'}],
+        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', face: '', email: '', tel: '', msg: '', site: '' }],
 
-        'estafeta': [{ email: 'E456@hotmail.com', pass: '456' }],
 
-        };
+    };
 
     
 
@@ -43,7 +43,7 @@ var vm = function () {
     self.updatecontas = function () {
 
         if ($("#email").val() != '' && $("#password").val() != '') {
-            self.contas.cliente.push({ "email": $("#email").val(), "pass": $("#password").val() });
+            self.contas.cliente.push({ "email": $("#email").val(), "pass": $("#password").val(), "nome": $("#nome").val(), "tel": $("#tele").val() });
             window.location.href = window.location.href.replace("criarconta.html", "Login.html");
         }
         if ($("#email").val() == '' && $("#password").val() == '') {

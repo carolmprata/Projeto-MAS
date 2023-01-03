@@ -37,189 +37,483 @@
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 ">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active text-warning" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
-                </ul>
-            
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active text-warning" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
+                <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
+            </ul>
+
         </div>
     </nav>
 
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered" >
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">CHIP7</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-4">
-                        <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja1chip7.png"  height="190"><br>
-                        <div id="map"></div>
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">CHIP7</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja1chip7.png" height="190"><br>
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header">Reparação e Manutenção</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Compra</h5>
+                                            <p class="card-text"> Compra de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Reparação</h5>
+                                            <p class="card-text"> Reparação de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Manutenção</h5>
+                                            <p class="card-text"> Manutenção de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Problemas</h5>
+                                            <p class="card-text"> Fala connosco e resolveremos o teu problema.</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">Contactos</h5>
+                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i> Av Força Aerea, 77 3800-356, Aveiro</p>
+                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 234029174</p>
+                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> lojaaveiro@chip7.pt</p>
+                                            <p class="card-text">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> 10h00 às 13h00 e das 14h30 às 19h30 <br>
+                                                Domingos e Feriados: <br> Encerrada
+                                            </p>
+                                            <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://www.facebook.com/chip7aveiro" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://chip7.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="col-8">
-                        <div class="card border-warning mb-3" >
-                            <div class="card-header">Reparação e Manutenção</div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <h5 class="card-title">Compra</h5>
-                                        <p class="card-text"> Compra de dispositivos eletrónicos</p>
-                                        <h5 class="card-title">Reparação</h5>
-                                        <p class="card-text"> Reparação de dispositivos eletrónicos</p>
-                                        <h5 class="card-title">Problemas</h5>
-                                        <p class="card-text"> Fala connosco e resolveremos o teu problema.</p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">New Point</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja2newpoint.jpg" height="190"><br>
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header">Reparação e Manutenção</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Compra</h5>
+                                            <p class="card-text"> Compra de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Reparação</h5>
+                                            <p class="card-text"> Reparação de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Manutenção</h5>
+                                            <p class="card-text"> Manutenção de dispositivos eletrónicos</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">Contactos</h5>
+                                            <p class="card-text"><i class="fa fa-location-a4rrow" aria-hidden="true"></i> Largo da Torre do Canha, 3810-164, Aveiro</p>
+                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 234349187</p>
+                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> NewPoint@gmail.pt</p>
+                                            <p class="card-text">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> Aberta 24 horas por dia <br>
+                                                Domingos e Feriados: <br> Encerrada
+                                            </p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://chip7.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <h5 class="card-title">Contactos</h5>
-                                        <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i> Av Força Aerea, 77 3800-356, Aveiro</p>
-                                        <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 234029174</p>
-                                        <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> lojaaveiro@chip7.pt</p>
-                                        <p class="card-text"><i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> 10h00 às 13h00 e das 14h30 às 19h30 <br>
-                                         Domingos e Feriados: <br> Encerrada</p>
-                                        <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://www.facebook.com/chip7aveiro" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
-                                        <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://chip7.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">MegaTec-Viseu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja3megatec.jpg" height="190"><br>
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header">Reparação e Manutenção</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Reparação</h5>
+                                            <p class="card-text"> Reparação de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Manutenção</h5>
+                                            <p class="card-text"> Manutenção de dispositivos eletrónicos</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">Contactos</h5>
+                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i>Rua Estevão Lopes Morago Lote 183 Loja A Marzovelos, Viseu, Portugal</p>
+                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 936459523</p>
+                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> megatecviseu@gmail.com </p>
+                                            <p class="card-text">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sexta: <br> 09h00 às 13h00 e das 14h30 às 19h30 <br>
+                                                Sábados, Domingos e Feriados: <br> Encerrada
+                                            </p>
+                                            <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://pt-pt.facebook.com/megatecviseu/" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://megatec.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                        </div>
                                     </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Inforlandia</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja4inforlandia.jpg" height="190"><br>
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header">Reparação</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Compra</h5>
+                                            <p class="card-text"> Compra de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Reparação</h5>
+                                            <p class="card-text"> Reparação de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Problemas</h5>
+                                            <p class="card-text"> Fala connosco e resolveremos o teu problema.</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">Contactos</h5>
+                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i>R. de Santa Rita 85 L6, 3810-167 Aveiro</p>
+                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 234340830</p>
+                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i>depemp@inforlandia.pt</p>
+                                            <p class="card-text">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> 10h00 às 12h00 e das 14h00 às 20h00 <br>
+                                                Domingos e Feriados: <br> Encerrada
+                                            </p>
+                                            <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://pt-br.facebook.com/inforlandiacorporate/" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://www.inforlandia.com/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Laser Net</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja5lasernet.jpg" height="190"><br>
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header">Consultoria, Implementação e Suporte Informático</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Compra</h5>
+                                            <p class="card-text"> Compra de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Reparação</h5>
+                                            <p class="card-text"> Reparação de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Problemas</h5>
+                                            <p class="card-text"> Fala connosco e resolveremos o teu problema.</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">Contactos</h5>
+                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i> R. do Foral 37, 3770-218 Oliveira do Bairro</p>
+                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i>234083053</p>
+                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> geral@lasernet.pt </p>
+                                            <p class="card-text">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> 10h00 às 13h00 e das 14h30 às 19h30 <br>
+                                                Domingos e Feriados: <br> Encerrada
+                                            </p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://lasernet.shop/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">TetoOnline - Viseu</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img class="card-img-top w-100 d-block fit-cover" src="Imagens/loja6tetoonline.jpg" height="190"><br>
+                            <div id="map"></div>
+                        </div>
+                        <div class="col-8">
+                            <div class="card border-warning mb-3">
+                                <div class="card-header">Venda e Reparação</div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h5 class="card-title">Compra</h5>
+                                            <p class="card-text"> Compra de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Venda</h5>
+                                            <p class="card-text"> Estamos dispostos a comprar-lhe o seu dispositivo antigo!</p>
+                                            <h5 class="card-title">Reparação</h5>
+                                            <p class="card-text"> Reparação de dispositivos eletrónicos</p>
+                                            <h5 class="card-title">Problemas</h5>
+                                            <p class="card-text"> Fala connosco e resolveremos o teu problema.</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="card-title">Contactos</h5>
+                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i>Av. Emídio Navarro N90 R/C, 3500-124 Viseu</p>
+                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 917365659</p>
+                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> info@tetoonline.com</p>
+                                            <p class="card-text">
+                                                <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sexta: <br> 09h00 às 12h00 e das 15h00 às 22h30 <br>
+                                                Sábado, Domingos e Feriados: <br> Encerrada
+                                            </p>
+                                            <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://pt-pt.facebook.com/tetoonline/" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://www.tetoonline.com/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container text-start py-4 py-xl-5" style="z-index: -1">
+
+        <div class="row mb-5 tudo">
+            <div class="col-xxl-3">
+                <input style="margin: 5px" value="" type="search" class="rounded col-6 float-start form-control" placeholder="Pesquisar por nome" aria-label="Search" aria-describedby="search-addon" id="pesquisa" onkeypress="myFunction(event)" />
+            </div>
+                
+                <div class="col-xxl-3">
+                    <select id="choice" class="form-select-lg" onchange="mudar()">
+                        <option value="0" selected>Todos os serviços</option>
+                        <option value="1">Manutenção</option>
+                        <option value="2">Reparação</option>
+                    </select>
+                </div>
+                <div class="col-xxl-3">
+                    <button class="btn btn-primary" type="button" style="color: var(--bs-white);" onclick="aveiro()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 23px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"></path>
+                        </svg>&nbsp; A minha localização
+                    </button>
+                </div>
+                <div class="col">
+                    <select class="form-select-lg">
+                        <optgroup label="Ordenar">
+                            <option value="12">Ordenar por nome</option>
+                            <option value="13">Ordernar por classificação</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" id="chip">
+                <div class="col-xxl-4">
+                    <div class="card" style="height: 500px;">
+                        <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja1chip7.png" width="634" height="200">
+                        <div class="card-body p-4">
+                            <p class="text-primary card-text mb-0">Reparação e Manutenção</p>
+                            <h4 class="card-title">CHIP 7 - Aveiro</h4>
+                            <p class="card-text">A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.</p>
+                            <div class="row d-flex">
+                                <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 19px;"></i> 4.4</p></div>
+                                <div class="col-9">
+                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" style="float: right;">
+                                        <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
+                                    </button>
                                 </div>
 
-
                             </div>
-                          </div>
+                        </div>
                     </div>
-
                 </div>
 
-                
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <div class="container text-start py-4 py-xl-5" style="z-index: -1">
-        
-        <div class="row mb-5 tudo">
-            <div class="col-xxl-3 offset-xxl-0"><input type="text" style="padding-right: 0px;margin-right: 0px;width: 295.8px;height: 40px;"></div>
-            <div class="col-xxl-3">
-                <select class="form-select-lg">
-                    <option value="undefined">Todos os serviços</option>
-                    <option value="12" selected="">Manutenção</option>
-                    <option value="13">Reparação</option>
-                </select>
-            </div>
-            <div class="col-xxl-3">
-                <button class="btn btn-primary" type="button" style="color: var(--bs-white);">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 23px;">
-                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                        <path d="M168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2H168.3zM192 256C227.3 256 256 227.3 256 192C256 156.7 227.3 128 192 128C156.7 128 128 156.7 128 192C128 227.3 156.7 256 192 256z"></path>
-                    </svg>&nbsp; A minha localização
-                </button>
-            </div>
-            <div class="col">
-                <select class="form-select-lg">
-                    <optgroup label="Ordenar">
-                        <option value="12">Ordenar por nome</option>
-                        <option value="13">Ordernar por classificação</option>
-                    </optgroup>
-                </select>
-            </div>
-        </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" >
-            <div class="col-xxl-4">
-                <div class="card" style="height: 500px;">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja1chip7.png" width="634" height="200">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção</p>
-                        <h4 class="card-title">CHIP 7 - Aveiro</h4>
-                        <p class="card-text">A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.</p>
-                        <div class="row d-flex">
-                            <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 19px;"></i> 4.4</p></div>
-                            <div class="col-9">
-                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" style="float: right;">
-                                    <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
-                                </button>
+
+                <div class="col-xxl-4" id="newpoint">
+                    <div class="card"style="height: 500px;">
+                        <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja2newpoint.jpg">
+                        <div class="card-body p-4">
+                            <p class="text-primary card-text mb-0">Reparação e Manutenção<br></p>
+                            <h4 class="card-title">New Point</h4>
+                            <p class="card-text">Loja com uma grande variedade serviços de reparação, rapidez na execução e atendimento 24 horas por dia.</p>
+                            <div class="d-flex">
+                                <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.5</p></div>
+                                <div class="col-9">
+                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1" style="float: right;">
+                                        <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
+                                    </button>
+                                </div>
                             </div>
-                            
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-xxl-4">
-                <div class="card">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja2newpoint.jpg">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção<br></p>
-                        <h4 class="card-title">New Point</h4>
-                        <p class="card-text">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        <div class="d-flex">
-                            <div></div>
-                        </div>
-                        <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xxl-4">
-                <div class="card" style="height: 500px;">
-                    <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja3megatec.jpg">
-                    <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção<br></p>
-                        <h4 class="card-title">MegaTec - Viseu</h4>
-                        <p class="card-text">Caracterizados pela simpatia no atendimento ao cliente, eficiência na resolução de todo o tipo de avarias e qualidade na prestação de serviços.</p>
-                        <div class="d-flex">
-                            <div></div>
-                        </div>
-                        <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.7</p>
+                <div class="col-xxl-4" id="megatec">
+                    <div class="card" style="height: 500px;">
+                        <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja3megatec.jpg">
+                        <div class="card-body p-4">
+                            <p class="text-primary card-text mb-0">Reparação e Manutenção<br></p>
+                            <h4 class="card-title">MegaTec - Viseu</h4>
+                            <p class="card-text">Caracterizados pela simpatia no atendimento ao cliente, eficiência na resolução de todo o tipo de avarias e qualidade na prestação de serviços.</p>
+                            <div class="d-flex">
+                                <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.7</p></div>
+                                <div class="col-9">
+                                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="float: right;">
+                                        <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container py-4 py-xl-5">
+    <div class="container py-4 py-xl-5" id="inforlandia">
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
             <div class="col-xxl-4">
                 <div class="card" style="height: 500px;">
                     <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja4inforlandia.jpg" width="634" height="200">
                     <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Reparação e Manutenção</p>
+                        <p class="text-primary card-text mb-0">Reparação</p>
                         <h4 class="card-title">Inforlandia</h4>
                         <p class="card-text">A Inforlandia é uma empresa europeia, com uma crescente presença internacional no mercado das TIC, principalmente como fabricante de computadores, portáteis e electrónica de consumo.</p>
                         <div class="d-flex">
-                            <div>
-                                <p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.0</p>
+                            <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.0</p></div>
+                            <div class="col-9">
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="float: right;">
+                                    <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4">
+            <div class="col-xxl-4" id="lasernet">
                 <div class="card" style="height: 500px;">
                     <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja5lasernet.jpg">
                     <div class="card-body p-4">
-                        <p class="text-primary card-text mb-0">Consultoria, Implementação, Manutenção e Suporte Informático<br></p>
+                        <p class="text-primary card-text mb-0">Consultoria, Implementação e Suporte Informático<br></p>
                         <h4 class="card-title">Laser Net</h4>
-                        <p class="card-text">A empresa dispõe de alguma variedade de equipamentos, serviços, manutenção e aconselhamento aos clientes.</p>
+                        <p class="card-text">A empresa dispõe de alguma variedade de equipamentos, serviços e aconselhamento aos clientes.</p>
                         <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.8</p>
+                            <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.8</p></div>
+                            <div class="col-9">
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="float: right;">
+                                    <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xxl-4" >
+            <div class="col-xxl-4" id="teto">
                 <div class="card" style="height: 500px;">
                     <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja6tetoonline.jpg">
                     <div class="card-body p-4">
@@ -227,15 +521,19 @@
                         <h4 class="card-title">TetoOnline - Viseu</h4>
                         <p class="card-text">Única loja em Viseu com todos os serviços de tecnologia numa só empresa</p>
                         <div class="d-flex">
-                            <div></div>
-                            <p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.9</p>
+                            <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 20px;"></i>4.9</p></div>
+                            <div class="col-9">
+                                <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal5" style="float: right;">
+                                    <i class="fa fa-eye" aria-hidden="true"></i> Ver detalhes
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        
+
 
     </div>
     <footer class="text-center bg-dark">
@@ -245,17 +543,88 @@
         </div>
     </footer>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
-     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
-     crossorigin="">
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin="">
     </script>
 
     <script>
-        var map = L.map('map', {scrollWheelZoom: false}).setView([46.857, 2.347], 5);
+        var map = L.map('map', { scrollWheelZoom: false }).setView([46.857, 2.347], 5);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 6,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
+
+
+        function pesquisa() {
+            console.log("deu")
+            if ($("#pesquisa").val() == "Chip7") {
+                $("#exampleModal").modal('show');
+            }
+            if ($("#pesquisa").val() == "New Point") {
+                $("#exampleModal1").modal('show');
+            }
+            if ($("#pesquisa").val() == "MegaTec") {
+                $("#exampleModal2").modal('show');
+            }
+            if ($("#pesquisa").val() == "Inforlandia") {
+                $("#exampleModal3").modal('show');
+            }
+            if ($("#pesquisa").val() == "Laser Net") {
+                $("#exampleModal4").modal('show');
+            }
+            if ($("#pesquisa").val() == "TetoOnline") {
+                $("#exampleModal5").modal('show');
+            }
+
+
+        }
+        function aveiro() {
+            $("#chip7").show();
+            $("#newpoint").show();
+            $("#megatec").hide();
+            $("#inforlandia").show();
+            $("#lasernet").show();
+            $("#teto").hide();
+
+        }
+
+
+        function mudar() {
+            if ($("#choice option:selected").val() == 0) {
+                $("#chip7").show();
+                $("#newpoint").show();
+                $("#megatec").show();
+                $("#inforlandia").show();
+                $("#lasernet").show();
+                $("#teto").show();
+            }
+            if ($("#choice option:selected").val() == 1) {
+                console.log('dá')
+                $("#chip7").show();
+                $("#newpoint").show();
+                $("#megatec").show();
+                $("#inforlandia").hide();
+                $("#lasernet").hide();
+                $("#teto").hide();
+            }
+            if ($("#choice option:selected").val() == 2) {
+                $("#chip7").show();
+                $("#newpoint").show();
+                $("#megatec").show();
+                $("#inforlandia").show();
+                $("#lasernet").hide();
+                $("#teto").show
+            }
+
+        }
+        function myFunction(event) {
+            var x = event.code;
+            if (x == "Enter") {
+                pesquisa();
+            }
+        }
     </script>
+    <script src="lojas.js"></script>
 </body>
 
 </html>
