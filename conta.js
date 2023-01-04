@@ -7,14 +7,14 @@ var vm = function () {
 
 
     self.contas = {
+        "currentuser": '',
 
-        "cliente": [{ email: 'gui@mail.com', pass: '123', msg: '', nome: 'Guilherme', tel: '9865742' }],
+        "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742' }],
 
         'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', face: '', email: '', tel: '', msg: '', site: '' }],
-
+        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '' }]
 
     };
-
     
 
 
