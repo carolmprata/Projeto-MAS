@@ -39,7 +39,11 @@
         <div class="row" style="margin-top:20px">
 
             <div class="col-12 col-lg-4">
-                <img class="img-thumbnail" src="Imagens/loja2newpoint.jpg" ><br />
+                <div id="selectedBanner"><img class="img-thumbnail" src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns=" style="height:250px ; width: 380px;"></div>
+                
+                <label>Adicione uma foto para a sua loja.
+                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" id="img" />
+                </label>
             </div>
             <div class="row col-lg-8 col-12">
                 <div class="py-2 ">
@@ -68,14 +72,14 @@
         </div>
         <div class="row" style="border-top:4px solid black">
             <div class="card col-4" style="width: 20rem; height: 20rem; margin: auto; padding: 0; margin-top: 20px;" >
-                <img class="card-img-top" src="/Imagens/repair.jpg" alt="Card image cap">
+                <img class="card-img-top" src="Imagens/repair.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Reparação de dispositivos</h5>
                     <a href="#" class="btn btn-warning">Encomendar</a>
                 </div>
             </div>
             <div class="card col-4" style="width: 20rem; margin: auto; padding: 0; height: 20rem; margin-top: 20px; ">
-                <img class="card-img-top" src="/Imagens/sprotect.jpg" alt="Card image cap">
+                <img class="card-img-top" src="Imagens/sprotect.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Manutenção de dispositivos</h5>
                     <a href="#" class="btn btn-warning">Encomendar</a>
@@ -86,20 +90,41 @@
         </div>
     </div>
 
-
-
-
-
-
-                <div class="navbar fixed-bottom  text-center bg-dark">
-                    <div class="container text-white py-3 py-lg-4" style="padding:0%">
-                        <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-home"></i>Aderir á FNAK</a></div>
-                        <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-phone"></i>Apoio ao Cliente</a></div>
-                        <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
-                    </div>
-                </div>
-
-                <script src="login.js"></script>
+    <div class="navbar fixed-bottom  text-center bg-dark">
+        <div class="container text-white py-3 py-lg-4" style="padding:0%">
+            <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-home"></i> Aderir á FNAK</a></div>
+            <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-phone"></i> Apoio ao Cliente</a></div>
+            <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
+        </div>
+    </div>
+    <script src="login.js"></script>
 </body>
+    <script>
+        var selDiv = "";
+        var storedFiles = [];
+        $(document).ready(function () {            
+            $("#img").on("change", handleFileSelect);
+            selDiv = $("#selectedBanner");
 
+        });
+
+        function handleFileSelect(e) {
+        var files = e.target.files;
+        var filesArr = Array.prototype.slice.call(files);
+        filesArr.forEach(function (f) {
+            if (!f.type.match("image.*")) {
+                return;
+          }
+            storedFiles.push(f);
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                var html = '<img src="' + e.target.result + "\" data-file='" + f.name + "alt='Category Image' height='250px' width='380px'>";
+                selDiv.html(html);
+
+            };
+            reader.readAsDataURL(f);
+            });
+      }
+    </script>
 </html>
