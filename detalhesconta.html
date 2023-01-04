@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Fnak</title>
+    <link href="Imagens/fnaklogo.png" rel="shortcut icon"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400); padding-bottom:120px" >
+
+    <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 ">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
+                <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fa fa-outdent" aria-hidden="true"></i> Detalhes da conta 
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Nome:</strong>
+                    <label>Alterar nome.</label><br>
+                    <input type="text" class="form-control" id="store-name" aria-describedby="basic-addon3">
+
+                    <strong>E-mail:</strong>
+                    <label>Alterar e-mail.</label><br>
+                    <input type="text" class="form-control" id="store-name" aria-describedby="basic-addon3">
+
+                    <strong>Contacto:</strong>
+                    <label for="phone">Alterar contacto.</label>
+                    <input class="input-group-text" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+                    <strong>Password:</strong>
+                    <label for="phone">Alterar password.</label>
+                    <input class="input-group-text" type="password" id="password" name="password">
+
+
+                    <input type="checkbox" name="" value=""> Desejo receber emails promocionais.<br>      
+                    <input type="checkbox" name="" value=""> Desejo receber sms sempre que uma atualização é feita no meu serviço.<br>      
+                    <input type="checkbox" name="" value=""> Desejo receber um e-mail sempre que uma atualização é feita no meu serviço.<br>   
+
+                    <button type="submit" class="btn btn-warning" form="form1" value="Submit"><strong><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar alterações</strong> </button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <i class="fa fa-credit-card-alt" aria-hidden="true"></i> Métodos de pagamento 
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" name="pagamento" id="pagamento1" required>
+                        <label class="form-check-label" for="pagamento1"><i class="fa fa-cc-visa" aria-hidden="true"></i> Visa Payment</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" name="pagamento" id="pagamento2" required>
+                        <label class="form-check-label" for="pagamento2"><i class="fa fa-paypal" aria-hidden="true"></i> Paypal</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" name="pagamento" id="pagamento3" required>
+                        <label class="form-check-label" for="pagamento3"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Master Card</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="radio" name="pagamento" id="pagamento4">
+                        <label class="form-check-label" for="pagamento4"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Multibanco</label><br>
+                        <div class="invalid-feedback small"><i class="fa fa-warning"></i> Escolha uma das opções.</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-warning" form="form1" value="Submit"><strong><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar alterações</strong> </button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Registo de Serviços
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <div class="navbar fixed-bottom  text-center bg-dark">
+        <div class="container text-white py-3 py-lg-4" style="padding:0%">
+            <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-home"></i> Aderir á FNAK</a></div>
+            <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-phone"></i> Apoio ao Cliente</a></div>
+            <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>
