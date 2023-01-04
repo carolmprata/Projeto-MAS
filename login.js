@@ -6,14 +6,13 @@ var vm = function () {
         var self = this;
         
 
-      
     self.contas = {
-        "currentuser": '',
+        "currentuser": [{nome:''}],
 
         "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742' }],
 
-        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', face: '', emailc:'', tel: '', msg: '', site: '' ,nome:'', desc:'', horario:'',morada:''}],
-        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '' }]
+        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', face: '', emailc: '', tel: '', msg: '', site: '', nome: '', desc: '', horario: '', morada: '' }],
+        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '' }]
 
     };
 
@@ -46,14 +45,15 @@ var vm = function () {
     var pop = '0';
 
 
-
+    self.contas.currentuser[0].nome = '';
     self.login = function () {
-        self.contas.currentuser = '';
+        
 
             for (i = 0; i < self.contas.cliente.length; i++) {
 
                 if (self.contas.cliente[i].email == $("#email").val() && self.contas.cliente[i].pass == $("#password").val()) {
-                    self.contas.currentuser = self.cliente[self.contas.cliente.indexOf($("#email").val())].nome;
+                    self.contas.currentuser[0].nome = self.contas.cliente[i].nome;
+                    window.localStorage.setItem('contas', JSON.stringify(self.contas))
                     window.location.href = window.location.href.replace("Login.html","index.html")
                 }
                 if (self.contas.loja[i].email == $("#email").val() && self.contas.loja[i].pass == $("#password").val()) {
