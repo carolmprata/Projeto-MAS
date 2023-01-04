@@ -47,7 +47,8 @@ var vm = function () {
 
 
 
-        self.login = function () {
+    self.login = function () {
+        self.contas.currentuser = '';
 
             for (i = 0; i < self.contas.cliente.length; i++) {
 
