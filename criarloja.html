@@ -19,6 +19,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <style>
+        textarea {
+            width: 600px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400); padding-bottom:120px" >
@@ -40,56 +46,86 @@
 
             <div class="col-12 col-lg-4">
                 <div id="selectedBanner"><img class="img-thumbnail" src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns=" style="height:250px ; width: 380px;"></div>
+                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                <strong>Logo:</strong>
+                <label>Adicione uma foto para a sua loja.</label>
+                <input type="file" class="form-control" name="myImage" accept="image/png, image/gif, image/jpeg" id="img" /><br>
+                <div class="col-6">
+                    <button type="submit" class="btn btn-warning" form="form1" value="Submit"><strong><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar alterações</strong> </button>
+                </div>
                 
-                <label>Adicione uma foto para a sua loja.
-                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" id="img" />
-                </label>
             </div>
             <div class="row col-lg-8 col-12">
-                <div class="py-2 ">
-                    <h1 style="color: rgb(252, 179, 0);">New Point</h1>
+                <div class="col-lg-4 col-6 py-2">
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                    <strong>Nome:</strong>
+                    <label>Insira o nome da sua loja.</label><br>
+                    <input type="text" class="form-control" id="store-name" aria-describedby="basic-addon3">
                 </div>
-                <div >
-                    <p>Loja com uma grande variedade serviços de reparação, rapidez na execução e atendimento 24 horas por dia.</p>
+                <div>
+                    <p><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        <strong>Descrição:</strong>
+                        <label>Insira uma breve descrição sobre a sua loja.</label><br>
+                        <textarea class="form-control" placeholder='Insira uma breve descrição sobre a sua loja' maxlength='1000' minlength='50'>
+                            
+                        </textarea>
+                    </p>
       
                 </div>
-                <div class="col-lg-4 col-6">
+                <div class="col-lg-6 col-6">
+                    <i class="fa fa-phone"></i> 
                     <strong>Contactos:</strong>
-                    <p><i class="fa fa-phone"></i> 234349187</p>
-                    <p><i class="fa fa-envelope"></i> NewPoint@gmail.pt</p>
-                    <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://chip7.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                    <p>
+                        <label for="phone">Insira o contacto da sua loja.</label>
+                        <input class="input-group-text" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+                    </p>
+                    <p>
+                        <div class="input-group mb-3 row">
+                            <div class="col-11">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                <strong>Site:</strong>
+                                <label for="basic-url">Insira o URL do seu site.</label></i>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon3">https://</span>
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                    
+                                </div>
+                                
+
+                            </div>
+
+                        </div>
+                    </p>
+                    
+                    <p><i class="fa fa-envelope" aria-hidden="true"></i>
+                        <strong>E-mail:</strong>
+                        <label for="email">Insira o e-mail da sua loja.</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </p>
                 </div>
                 <div class="col-lg-4 col-6 ">
                     <p>
-                        <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: Aberta 24 horas por dia <br>
-                        Domingos e Feriados: Encerrada
+                        <i class="fa fa-clock-o" aria-hidden="true"></i> 
+                        <strong>Horário:</strong> 
+                        <label for="horario">Insira o horário da sua loja.</label>
+                        <textarea class="form-control" placeholder='Insira o horário da sua loja' maxlength='1000' minlength='50'>
+                            
+                        </textarea>
                     </p>
-                    <p><strong>Morada:</strong> Largo da Torre do Canha, 3810-164, Aveiro</p>
+                    <p>
+                        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                        <strong>Morada:</strong>
+                        <label for="basic-url">Insira a morada da sua loja.</label></i>
+                        <input type="text" class="form-control" id="localização" aria-describedby="basic-addon3">
+                    </p>
 
                 </div>
 
             </div>  
         </div>
-        <div class="row" style="border-top:4px solid black">
-            <div class="card col-4" style="width: 20rem; height: 20rem; margin: auto; padding: 0; margin-top: 20px;" >
-                <img class="card-img-top" src="Imagens/repair.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Reparação de dispositivos</h5>
-                    <a href="#" class="btn btn-warning">Encomendar</a>
-                </div>
-            </div>
-            <div class="card col-4" style="width: 20rem; margin: auto; padding: 0; height: 20rem; margin-top: 20px; ">
-                <img class="card-img-top" src="Imagens/sprotect.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Manutenção de dispositivos</h5>
-                    <a href="#" class="btn btn-warning">Encomendar</a>
-                </div>
-            </div>
 
-
-        </div>
     </div>
-
     <div class="navbar fixed-bottom  text-center bg-dark">
         <div class="container text-white py-3 py-lg-4" style="padding:0%">
             <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-home"></i> Aderir á FNAK</a></div>
