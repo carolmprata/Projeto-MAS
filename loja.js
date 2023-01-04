@@ -18,8 +18,32 @@ var vm = function () {
     };
 
 
-    function pagar()
+    self.pagar = function () {
+           self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": $("#tipo").val(), "casa": $("#casa").val(), "cliente": self.contas.currentuser });
+           console.log(self.contas);
+     
 
+    }
+
+    self.pop = ko.computed(function () {
+           if ($("#tipo :selected").val() == "Tele") {
+            console.log("d")
+            $("#preco").val("O preço base do seu pedido ficará a:80€");
+            if ($("#casa").is(":checked")) {
+                $("#preco").val("O preço base do seu pedido ficará a:90€");
+                $("#pagar").modal("show");
+           }
+            else { $("#pagar").modal("show"); }
+            }
+           if ($("#tipo :selected").val() == "Computador") {
+            $("#preco").val("O preço base do seu pedido ficará a:100€");
+            if ($("#casa").is(":checked")) {
+                $("#preco").val("O preço base do seu pedido ficará a:105€");
+                $("#pagar").modal("show");
+            }
+            else { $("#pagar").modal("show"); }
+           }
+    });
 
 
         self.loadcontas = function () {

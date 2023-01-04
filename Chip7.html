@@ -103,13 +103,13 @@
                         <div>Qual o seu tipo de dispositivo?:</div>
                         <div>
                             <select class="form-select" id="tipo" aria-label="Default select example">
-                                <option value="1">Tablet ou telemóvel</option>
-                                <option value="2">Computador</option>
+                                <option value="Tele">Tablet ou telemóvel</option>
+                                <option value="Computador">Computador</option>
                             </select>
                         </div>
                         <div>Por favor, indique o problema do seu dispositivo:</div>
                         <div>
-                            <input type="text" id="problema" class="form-control" style="margin:auto" />
+                            <input type="text" id="problema" class="form-control" style="margin:auto" value="" />
                         </div>
                         <div>Por favor, indique a marca e versão do seu dispositivo:</div>
                         <div>
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fazer Pedido</button>
+                    <button type="button" data-bind="click:pop()" class="btn btn-warning" data-bs-dismiss="modal">Fazer Pedido</button>
                 </div>
             </div>
         </div>
@@ -140,13 +140,13 @@
                         <div>Qual o seu tipo de dispositivo?:</div>
                         <div>
                             <select class="form-select" id="tipo" aria-label="Default select example">
-                                <option value="1">Tablet ou telemóvel</option>
-                                <option value="2">Computador</option>
+                                <option value="Tele">Tablet ou telemóvel</option>
+                                <option value="Computador">Computador</option>
                             </select>
                         </div>
                         <div>O que deseja alterar?</div>
                         <div>
-                            <input type="text" id="problema" class="form-control" style="margin:auto" />
+                            <input type="text" id="problema" class="form-control" style="margin:auto" value="" />
                         </div>
                         <div>Por favor, indique a marca e versão do seu dispositivo:</div>
                         <div>
@@ -161,11 +161,12 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fazer Pedido</button>
+                    <button type="button" data-bind="click:pop()" class="btn btn-warning" data-bs-dismiss="modal">Fazer Pedido</button>
                 </div>
             </div>
         </div>
     </div>
+
     <div class="modal fade" id="pagar" tabindex="-1" aria-labelledby="pagar" aria-hidden="true">
         <div class="modal-dialog modal modal-dialog-centered">
             <div class="modal-content">
@@ -174,9 +175,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div>O seu preço do seu pedido ficará a:</div>
-                        <div><button type="button" onclick="pagar()" class="btn btn-warning" data-bs-dismiss="modal">Usar método de pagamento pré-definido.</button></div>
-                        <div><button type="button" onclick="pagar()" class="btn btn-warning" data-bs-dismiss="modal">Usar outro método de pagamento.</button></div>
+                        <input type="text" class="form-control" disabled id="preco" style="margin-bottom:20px">
+                        <div class="row" style="margin-bottom:20px"><button type="button" data-bind="click:pagar()" class="btn btn-warning" data-bs-dismiss="modal">Usar método de pagamento pré-definido.</button></div>
+                        <div class="row"><button type="button" data-bind="click:pagar()" class="btn btn-warning" data-bs-dismiss="modal">Usar outro método de pagamento.</button></div>
                     </div>
                 </div>
             </div>
@@ -192,7 +193,7 @@
         </div>
     </div>
 
-    <script src="login.js"></script>
+    <script src="loja.js"></script>
 </body>
 
 </html>
