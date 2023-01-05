@@ -10,7 +10,7 @@ var vm = function () {
 
         "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742' }],
 
-        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', face: '', emailc: '', tel: '', msg: '', site: '', nome: '', desc: '', horario: '', morada: '' }],
+        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', emailc: 'lojaaveiro@chip7.pt', tel: '234029174', msg: '', site: 'https://chip7.pt/', nome: 'CHIP 7 - Aveiro', desc: 'A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.', horario: 'Segunda a sábado:10h00 às 13h00 e das 14h30 às 19h30;Domingos e Feriados:Encerrada', morada: ' Av Força Aerea, 77 3800-356, Aveiro' }],
         "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '' }]
 
     };

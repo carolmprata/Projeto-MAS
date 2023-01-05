@@ -7,11 +7,11 @@ var vm = function () {
         
 
     self.contas = {
-        "currentuser": [{nome:''}],
+        "currentuser": [{ nome: '' }],
 
         "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742' }],
 
-        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', face: '', emailc: '', tel: '', msg: '', site: '', nome: '', desc: '', horario: '', morada: '' }],
+        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', emailc: 'lojaaveiro@chip7.pt', tel: '234029174', msg: '', site: 'https://chip7.pt/', nome: 'CHIP 7 - Aveiro', desc: 'A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.', horario: 'Segunda a sábado:10h00 às 13h00 e das 14h30 às 19h30;Domingos e Feriados:Encerrada', morada: ' Av Força Aerea, 77 3800-356, Aveiro' }],
         "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '' }]
 
     };
@@ -25,6 +25,7 @@ var vm = function () {
             if (localStorage.getItem('contas') != null) {
 
                 self.contas = JSON.parse(localStorage.contas)
+
 
             } else {
 
@@ -54,7 +55,7 @@ var vm = function () {
                 if (self.contas.cliente[i].email == $("#email").val() && self.contas.cliente[i].pass == $("#password").val()) {
                     self.contas.currentuser[0].nome = self.contas.cliente[i].nome;
                     window.localStorage.setItem('contas', JSON.stringify(self.contas))
-                    window.location.href = window.location.href.replace("Login.html","index.html")
+                    window.location.href = window.location.href.replace("Login.html","lojas.html")
                 }
                 if (self.contas.loja[i].email == $("#email").val() && self.contas.loja[i].pass == $("#password").val()) {
                     window.location.href = window.location.href.replace("Login.html", "criarloja.html")

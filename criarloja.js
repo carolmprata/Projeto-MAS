@@ -4,8 +4,16 @@ var vm = function () {
         console.log('ViewModel initiated...');
 
         var self = this;
-
-
+        
+    self.nome = ko.observable('');
+    self.desc = ko.observable('');
+    self.tel = ko.observable('');
+    self.hor = ko.observable('');
+    self.tel = ko.observable('');
+    self.site = ko.observable('');
+    self.morada = ko.observable('');
+    self.email = ko.observable('');
+      
     self.contas = {
         "currentuser": [{ nome: '' }],
 
@@ -15,7 +23,38 @@ var vm = function () {
         "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '' }]
 
     };
-    
+
+    self.guardar = function () {
+      
+        if ($("#email").val() != '') {
+            self.contas.loja[0].emailc = $("#email").val();
+        }
+        if ($("#nome").val() != '') {
+            self.contas.loja[0].nome = $("#nome").val();
+        }
+        if ($("#descricao").val() != '') {
+            self.contas.loja[0].desc = $("#descricao").val();
+        }
+        if ($("#phone").val() != '') {
+            self.contas.loja[0].tel = $("#phone").val();
+        }
+        if ($("#url").val() != '') {
+            self.contas.loja[0].site = "https://"+$("#url").val();
+        }
+        if ($("#horario").val() != '') {
+            self.contas.loja[0].horario = $("#horario").val();
+        }
+        if ($("#morada").val() != '') {
+            self.contas.loja[0].morada = $("#morada").val();
+        }
+
+
+        console.log(self.contas);
+
+        window.localStorage.setItem('contas', JSON.stringify(self.contas))
+
+    }
+    console.log("VM initialized!");
 
 
 
@@ -30,41 +69,14 @@ var vm = function () {
                 localStorage.setItem('contas', JSON.stringify(self.contas));
 
             };
-
-
-
-
          }
         self.loadcontas();
         console.log(self.contas);
 
-    var para = 0;
-    
-    self.updatecontas = function () {
-
-        if ($("#email").val() != '' && $("#password").val() != '') {
-            self.contas.cliente.push({ "email": $("#email").val(), "pass": $("#password").val(), "nome": $("#nome").val(), "tel": $("#tele").val() });
-            window.location.href = window.location.href.replace("criarconta.html", "Login.html");
-        }
-        if ($("#email").val() == '' && $("#password").val() == '') {
-            if (para == '1') {
-                $("#erro").modal('show');
-            }
-            else {
-                para = '1';
-            }
-        }
 
 
-        console.log(self.contas);
-
-        window.localStorage.setItem('contas', JSON.stringify(self.contas))
-
-        }
     console.log("VM initialized!");
 }
-
-
 $(document).ready(function () {
     console.log("ready!");
     ko.applyBindings(new vm());

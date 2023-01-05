@@ -16,25 +16,46 @@ var vm = function () {
 
     };
     
+    var x = 0;
+    self.login1 = function () {
+        if (x == 2) {
+            if (self.contas.currentuser[0].nome != '') {
+                window.location.href = window.location.href.replace("index.html", "meusservi\xE7os.html");
+            }
+            else { window.location.href = window.location.href.replace("index.html", "Login.html"); }
+        }
+        else {x=x+1 }
+    };
+
+    self.login2 = function () {
+        if (x == 2) {
+            if (self.contas.currentuser[0].nome != '') {
+                window.location.href = window.location.href.replace("index.html", "detalhesconta.html");
+            }
+            else { window.location.href = window.location.href.replace("index.html", "Login.html"); }
+        }
+        else {x=x+1 }
+    };
+
+    self.loadcontas = function () {
+
+        if (localStorage.getItem('contas') != null) {
+
+            self.contas = JSON.parse(localStorage.contas)
+            self.contas.currentuser[0].nome = "";
+            window.localStorage.setItem('contas', JSON.stringify(self.contas))
+        } else {
+
+            localStorage.setItem('contas', JSON.stringify(self.contas));
+            self.contas.currentuser[0].nome = "";
+            window.localStorage.setItem('contas', JSON.stringify(self.contas))
+        };
 
 
 
-        self.loadcontas = function () {
-
-            if (localStorage.getItem('contas') != null) {
-
-                self.contas = JSON.parse(localStorage.contas)
-
-            } else {
-
-                localStorage.setItem('contas', JSON.stringify(self.contas));
-
-            };
 
 
-
-
-         }
+    };
         self.loadcontas();
         console.log(self.contas);
 

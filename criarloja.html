@@ -39,12 +39,7 @@
         <div class="row" style="margin-top:20px">
 
             <div class="col-12 col-lg-4">
-                <div id="selectedBanner"><img class="img-thumbnail" src="https://media.istockphoto.com/id/1357365823/vector/default-image-icon-vector-missing-picture-page-for-website-design-or-mobile-app-no-photo.jpg?s=612x612&w=0&k=20&c=PM_optEhHBTZkuJQLlCjLz-v3zzxp-1mpNQZsdjrbns=" style="height:250px ; width: 380px;"></div>
-                
-                <label>Adicione uma foto para a sua loja.
-                    <input type="file" name="myImage" accept="image/png, image/gif, image/jpeg" id="img" />
-                </label>
-                <button type="button" class="btn btn-warning" style="margin-top: 20px ;">Guardar</button>
+                <div id="selectedBanner"><img class="img-thumbnail" src="/Imagens/loja1chip7.png" style="height:250px ; width: 380px;"></div>
             </div>
             <div class="row col-lg-8 col-12">
                 <div class="py-2 col-6">
@@ -52,13 +47,13 @@
                     <label for="email">Insira o nome da sua loja.</label>
                     <input type="text" class="form-control" id="nome" name="nome">
                 </div>
-                <div >
+                <div>
                     <strong>Descrição:</strong>
                     <label for="email">Insira a descrição da sua loja.</label><br>
-                    <textarea class="form-control" id="descricao" name="story" rows="5" cols="33">
+                    <input class="form-control" id="descricao" name="story" rows="5" cols="33">
                     
-                    </textarea>
-      
+              
+
                 </div>
                 <div class="col-lg-4 col-6">
                     <strong>Contactos:</strong>
@@ -74,18 +69,19 @@
                                 <strong>Site:</strong>
                                 <label for="basic-url">Insira o URL do seu site.</label></i>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon3">https://</span>
-                                    <input type="text" class="form-control" id="url" aria-describedby="basic-addon3">
-                                    
+                                    <span class="input-group-text" id="basic-addon3">https://<input type="text" class="form-control" id="url" aria-describedby="basic-addon3"></span>
+
+
                                 </div>
-                                
+
 
                             </div>
 
                         </div>
                     </p>
-                    
-                    <p><i class="fa fa-envelope" aria-hidden="true"></i>
+
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
                         <strong>E-mail:</strong>
                         <label for="email">Insira o e-mail da sua loja.</label>
                         <input type="email" class="form-control" id="email" name="email">
@@ -93,24 +89,27 @@
                 </div>
                 <div class="col-lg-4 col-6 ">
                     <p>
+
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
                         <strong>Horário:</strong>
                         <label for="horario">Insira o horário da sua loja.</label><br>
-                        <textarea class="form-control" id="horario" name="story" rows="5" cols="33">
-                        
-                        </textarea>
-
+                        <input class="form-control" id="horario" name="story" rows="5" cols="33">
+      
                     </p>
                     <p>
-                        <strong>Morada:</strong> 
+                        <strong>Morada:</strong>
                         <label for="morada">Insira a morada da sua loja.</label>
                         <input type="text" class="form-control" id="morada" name="email">
                     </p>
 
                 </div>
-
-            </div>  
+                
+            </div> 
+            <button type="button" data-bind="click:guardar()" class="btn btn-warning btn-sm" style="width:200px; margin:auto">
+                Guardar Alterações
+            </button>
         </div>
+
     </div>
 
     <div class="navbar fixed-bottom  text-center bg-dark">
@@ -120,34 +119,7 @@
             <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
         </div>
     </div>
-    <script src="login.js"></script>
+    <script src="criarloja.js"></script>
 </body>
-    <script>
-        var selDiv = "";
-        var storedFiles = [];
-        $(document).ready(function () {            
-            $("#img").on("change", handleFileSelect);
-            selDiv = $("#selectedBanner");
 
-        });
-
-        function handleFileSelect(e) {
-        var files = e.target.files;
-        var filesArr = Array.prototype.slice.call(files);
-        filesArr.forEach(function (f) {
-            if (!f.type.match("image.*")) {
-                return;
-          }
-            storedFiles.push(f);
-
-            var reader = new FileReader();
-            reader.onload = function (e) {
-                var html = '<img src="' + e.target.result + "\" data-file='" + f.name + "alt='Category Image' height='250px' width='380px'>";
-                selDiv.html(html);
-
-            };
-            reader.readAsDataURL(f);
-            });
-      }
-    </script>
 </html>

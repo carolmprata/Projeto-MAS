@@ -21,14 +21,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
-<body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400);padding-bottom: 70px; padding-top: 100px" >
+<body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400);padding-bottom: 70px; padding-top: 100px">
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
+                <li class="nav-item"><a class="nav-link active text-warning" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
                 <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
-                <li class="nav-item"><a class="nav-link active text-warning" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
                 <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
             </ul>
         </div>
@@ -40,7 +40,7 @@
             <div class="container position-relative">
                 <div class="row d-flex justify-content-center">
                     <div class="col">
-                        
+
                         <h1 class="fs-2"><strong><span style="color: rgb(252, 179, 0);">O meu telemóvel está bloqueado a pedir código PUK:</span></strong><br></h1>
                         <h3 class=""><span style="color: rgb(252, 179, 0);">O que é um código PUK?</span><br></h3>
                         <p>PUK, abreviatura de PIN Unlock Key é uma combinação numérica, composta por 8 algarismos, presente na maioria dos cartões de comunicação móvel, nomeadamente de telemóveis. A sua função é a de desbloquear um cartão, se o PIN errado for introduzido mais de 3 vezes.</p>
@@ -90,11 +90,12 @@
         </div>
     </div>
     <script type="text/javascript">
-            $("#envia").click(function () {
-                $("#sucesso").modal('show');
-                $("#message-2").val('');
-            })        
+        $("#envia").click(function () {
+            $("#sucesso").modal('show');
+            $("#message-2").val('');
+        })
     </script>
+   
 </body>
 
 </html>

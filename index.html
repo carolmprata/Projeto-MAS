@@ -23,13 +23,13 @@
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
-                </ul>
-            </div>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
+                <li class="nav-item"><button style="background-color:transparent; border:0" data-bind="click: login1()"><a class="nav-link"><i class="fa fa-shopping-cart "></i> Meus serviços</a></button></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
+                <li class="nav-item"><button style="background-color:transparent; border:0" data-bind="click: login2()"><a class="nav-link"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></button></li>
+            </ul>
+        </div>
         </div>
     </nav>
 
@@ -54,7 +54,7 @@
             <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
         </div>
     </div>
-
+    <script src="checkarlogin2.js"></script>
 </body>
 
 </html>

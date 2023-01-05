@@ -38,10 +38,10 @@
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active text-warning" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
-                <li class="nav-item"><a class="nav-link" href="meusserviços.html"><i class="fa fa-shopping-cart "></i> Meus serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="lojas.html"> <i class="fa fa-building" aria-hidden="true"></i> Lojas aderentes</a></li>
+                <li class="nav-item"><button style="background-color:transparent; border:0" data-bind="click: login1()"><a class="nav-link"><i class="fa fa-shopping-cart "></i> Meus serviços</a></button></li>
                 <li class="nav-item"><a class="nav-link" href="faq.html"><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
+                <li class="nav-item"><button style="background-color:transparent; border:0" data-bind="click: login2()"><a class="nav-link"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></button></li>
             </ul>
 
         </div>
@@ -52,7 +52,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">CHIP7</h1>
+                    <h1 class="modal-title fs-5" data-bind="text:nome" id="exampleModalLabel">CHIP7</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -78,15 +78,15 @@
                                         </div>
                                         <div class="col-6">
                                             <h5 class="card-title">Contactos</h5>
-                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i> Av Força Aerea, 77 3800-356, Aveiro</p>
-                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 234029174</p>
-                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> lojaaveiro@chip7.pt</p>
-                                            <p class="card-text">
+                                            <p class="card-text"data-bind="text:morada"><i class="fa fa-location-arrow" aria-hidden="true"></i> Av Força Aerea, 77 3800-356, Aveiro</p>
+                                            <p class="card-text"data-bind="text:tel"><i class="fa fa-phone" aria-hidden="true"></i> 234029174</p>
+                                            <p class="card-text"data-bind="text:email"><i class="fa fa-envelope" aria-hidden="true"></i> lojaaveiro@chip7.pt</p>
+                                            <p class="card-text" data-bind="text:hor">
                                                 <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> 10h00 às 13h00 e das 14h30 às 19h30 <br>
                                                 Domingos e Feriados: <br> Encerrada
                                             </p>
                                             <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://www.facebook.com/chip7aveiro" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
-                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://chip7.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a data-bind="attr:{href:site}" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
                                         </div>
                                     </div>
 
@@ -426,8 +426,8 @@
                     <img class="card-img-top w-100 d-block fit-cover" style="height: 250px;" src="Imagens/loja1chip7.png" width="634" height="200">
                     <div class="card-body p-4">
                         <p class="text-primary card-text mb-0">Reparação e Manutenção</p>
-                        <h4 class="card-title">CHIP 7 - Aveiro</h4>
-                        <p class="card-text">A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.</p>
+                        <h4 class="card-title" data-bind="text:nome">CHIP 7 - Aveiro</h4>
+                        <p class="card-text"data-bind="text:desc">A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.</p>
                         <div class="row d-flex">
                             <div class="col-3"><p class="fw-bold mb-0"><i class="fa fa-star" style="font-size: 19px;"></i> 4.4</p></div>
                             <div class="col-9">
@@ -539,9 +539,9 @@
 
 
     </div>
-        
 
-           
+
+
 
     <div class="navbar fixed-bottom  text-center bg-dark">
         <div class="container text-white py-3 py-lg-4" style="padding:0%">
@@ -586,12 +586,12 @@
 
 
         }
-        function ordenar(){
+        function ordenar() {
             if ($("#ordena option:selected").val() == 1) {
-                window.location.href = window.location.href.replace("lojas.html","lojas.html")
+                window.location.href = window.location.href.replace("lojas.html", "lojas.html")
             }
             if ($("#ordena option:selected").val() == 2) {
-                window.location.href = window.location.href.replace("lojas.html","lojasclassi.html")
+                window.location.href = window.location.href.replace("lojas.html", "lojasclassi.html")
             }
 
         }
@@ -638,7 +638,7 @@
             }
         }
     </script>
-    <script src="lojas.js"></script>
+    <script src="checkarlogin1.js"></script>
 </body>
 
 </html>
