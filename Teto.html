@@ -21,7 +21,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 </head>
 
-<body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400); padding-bottom:120px" >
+<body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400); padding-bottom:120px">
 
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 ">
         <div class="container">
@@ -39,15 +39,15 @@
         <div class="row" style="margin-top:20px">
 
             <div class="col-12 col-lg-4">
-                <img class="img-thumbnail" src="Imagens/loja6tetoonline.jpg" ><br />
+                <img class="img-thumbnail" src="Imagens/loja6tetoonline.jpg"><br />
             </div>
             <div class="row col-lg-8 col-12">
                 <div class="py-2 ">
-                    <h1 style="color: rgb(252, 179, 0);">TetoOnline - Viseu</h1>
+                    <h1 style="color: rgb(252, 179, 0);" id="loja">TetoOnline - Viseu</h1>
                 </div>
-                <div >
+                <div>
                     <p>Única loja em Viseu com todos os serviços de tecnologia numa só empresa.</p>
-      
+
                 </div>
                 <div class="col-lg-4 col-6">
                     <strong>Contactos:</strong>
@@ -67,36 +67,144 @@
 
                 </div>
 
-            </div>  
+            </div>
         </div>
         <div class="row" style="border-top:4px solid black">
-            <div class="card col-4" style="width: 20rem; height: 20rem; margin: auto; padding: 0; margin-top: 20px;" >
+            <div class="card col-4" style="width: 20rem; height: 20rem; margin: auto; padding: 0; margin-top: 20px;">
                 <img class="card-img-top" src="/Imagens/repair.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Reparação de dispositivos</h5>
-                    <a href="#" class="btn btn-warning">Encomendar</a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                        Encomendar
+                    </button>
                 </div>
             </div>
-     
+
 
 
         </div>
     </div>
 
 
-
-
-
-
-                <div class="navbar fixed-bottom  text-center bg-dark">
-                    <div class="container text-white py-3 py-lg-4" style="padding:0%">
-                        <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-home"></i>Aderir á FNAK</a></div>
-                        <div class="row col-4"><a class="link-light" style="text-decoration:none" href="apoio.html"><i class="fa fa-phone"></i>Apoio ao Cliente</a></div>
-                        <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pedido">Reparação</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div>Qual o seu tipo de dispositivo?:</div>
+                        <div>
+                            <select class="form-select" id="tipo" aria-label="Default select example">
+                                <option value="Tele">Tablet ou telemóvel</option>
+                                <option value="Computador">Computador</option>
+                            </select>
+                        </div>
+                        <div>Por favor, indique o problema do seu dispositivo:</div>
+                        <div>
+                            <input type="text" id="problema" class="form-control" style="margin:auto" value="" />
+                        </div>
+                        <div>Por favor, indique a marca e versão do seu dispositivo:</div>
+                        <div>
+                            <input type="text" id="marca" class="form-control" style="margin:auto" />
+                        </div>
+                        <div class="form-check" style="margin-left: 12px; margin-top: 12px">
+                            <input class="form-check-input" type="checkbox" value="1" id="casa">
+                            <label class="form-check-label" for="casa">
+                                Deseja entrega e recolha ao domicilio?
+                            </label>
+                        </div>
                     </div>
                 </div>
+                <div class="modal-footer">
+                    <button type="button" id="1" data-bind="click:pop(1)" class="btn btn-warning" data-bs-dismiss="modal">Fazer Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pedido">Manutenção</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div>Qual o seu tipo de dispositivo?:</div>
+                        <div>
+                            <select class="form-select" id="tipo1" aria-label="Default select example">
+                                <option value="Tele">Tablet ou telemóvel</option>
+                                <option value="Computador">Computador</option>
+                            </select>
+                        </div>
+                        <div>O que deseja alterar?</div>
+                        <div>
+                            <input type="text" id="problema1" class="form-control" style="margin:auto" value="" />
+                        </div>
+                        <div>Por favor, indique a marca e versão do seu dispositivo:</div>
+                        <div>
+                            <input type="text" id="marca1" class="form-control" style="margin:auto" />
+                        </div>
+                        <div class="form-check" style="margin-left: 12px; margin-top: 12px">
+                            <input class="form-check-input" type="checkbox" value="1" id="casa1">
+                            <label class="form-check-label" for="casa">
+                                Deseja entrega e recolha ao domicilio?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="2" data-bind="click:pop(2)" class="btn btn-warning" data-bs-dismiss="modal">Fazer Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="pagar2" tabindex="-1" aria-labelledby="pagar" aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pedido">Pagamento</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <input type="text" class="form-control" disabled id="preco2" style="margin-bottom:20px">
+                        <div class="row" style="margin-bottom:20px"><button type="button" data-bind="click:pagar2()" class="btn btn-warning" data-bs-dismiss="modal">Usar método de pagamento pré-definido.</button></div>
+                        <div class="row"><button type="button" data-bind="click:pagar2()" class="btn btn-warning" data-bs-dismiss="modal">Usar outro método de pagamento.</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <script src="login.js"></script>
+    <div class="modal fade" id="pagar1" tabindex="-1" aria-labelledby="pagar" aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pedido">Pagamento</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <input type="text" class="form-control" disabled id="preco1" style="margin-bottom:20px">
+                        <div class="row" style="margin-bottom:20px"><button type="button" data-bind="click:pagar1()" class="btn btn-warning" data-bs-dismiss="modal">Usar método de pagamento pré-definido.</button></div>
+                        <div class="row"><button type="button" data-bind="click:pagar1()" class="btn btn-warning" data-bs-dismiss="modal">Usar outro método de pagamento.</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="navbar fixed-bottom  text-center bg-dark">
+        <div class="container text-white py-3 py-lg-4" style="padding:0%">
+            <div class="row col-4"><a class="link-light" style="text-decoration:none" href="aderir.html"><i class="fa fa-home"></i>Aderir á FNAK</a></div>
+            <div class="row col-4"><a class="link-light" style="text-decoration:none" href="apoio.html"><i class="fa fa-phone"></i>Apoio ao Cliente</a></div>
+            <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
+        </div>
+    </div>
+
+    <script src="loja.js"></script>
 </body>
 
 </html>

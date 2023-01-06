@@ -2,8 +2,12 @@
 var vm = function () {
 
         console.log('ViewModel initiated...');
+    var self = this;
+    var orccurrent = '';
+    self.pedidos = ko.observableArray([]);
+    self.descorc = ko.observable('');
+    self.descp = ko.observable('');
 
-        var self = this;
     self.contas = {
         "currentuser": [{ nome: '', n: -1 }],
 
@@ -16,8 +20,45 @@ var vm = function () {
 
 
 
+    self.verificar = function (nome) {
+        for (i = 0; i < self.contas.pedidos.length; i++) {
+            if (orccurrent == self.contas.pedidos[i].cliente) {
+                if (self.contas.pedidos[i].orca == '' || self.contas.pedidos[i].orca == '1') {
+                    orccurrent = nome;
+                    $("#1").modal('show');
+                } else {
+                    self.descorc(self.contas.pedidos[i].orcdesc);
+                    self.descp(self.contas.pedidos[i].orcp);
 
-    
+                    $("#2").modal('show');
+                }
+                
+            }
+        }
+
+    }
+    self.negar = function (nome) {
+        for (i = 0; i < self.contas.pedidos.length; i++) {
+            if (orccurrent == self.contas.pedidos[i].cliente) {
+                self.contas.pedidos[i].orca = '-1'
+                console.log(self.contas);
+                window.localStorage.setItem('contas', JSON.stringify(self.contas));
+                    $("#2").modal('hide');
+            }
+        }
+
+    }
+    self.aceitar = function (nome) {
+        for (i = 0; i < self.contas.pedidos.length; i++) {
+            if (orccurrent == self.contas.pedidos[i].cliente) {
+                self.contas.pedidos[i].orca = '1'
+                console.log(self.contas);
+                window.localStorage.setItem('contas', JSON.stringify(self.contas));
+                    $("#2").modal('hide');
+            }
+        }
+
+    }
 
 
 
@@ -32,9 +73,14 @@ var vm = function () {
                 localStorage.setItem('contas', JSON.stringify(self.contas));
 
             };
-
-
-
+            var temp = [];
+            for (i = 0; i < self.contas.pedidos.length; i++) {
+                if (self.contas.pedidos[i].cliente == self.contas.currentuser[0].nome) {
+                    temp.push(self.contas.pedidos[i])
+                }
+            }
+            self.pedidos(temp);
+            
 
          }
         self.loadcontas();

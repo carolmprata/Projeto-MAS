@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
 </head>
-<body style="color: var(--bs-black);border-color: var(--bs-blue);background: var(--bs-gray-400);">
+<body style="color: var(--bs-black); border-color: var(--bs-blue); background: var(--bs-gray-400); padding-bottom: 200px; padding-top:200px">
     <nav class="navbar navbar-dark navbar-expand-md bg-dark py-3 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html" style="margin-right: 4px; margin-left: 2px;"><img width="78" height="84" src="Imagens/fnaklogo.png"></a>
@@ -31,12 +31,139 @@
                 <li class="nav-item"><a class="nav-link" href="Login.html"><i class="fa fa-user" style="font-size: 16px;"></i> Conta</a></li>
             </ul>
         </div>
-        </div>
     </nav>
+    <div class="container">
+        <div class="row col-12" data-bind="foreach:pedidos">
+            <!-- ko if: loja=="CHIP 7 - Aveiro" -->
+            <div class="card" style="width: 20rem; margin:auto; margin-bottom:10px; border:2px solid black">
+                <div class="card-body">
+                    <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>
+                    <p class="card-text" data-bind="text:'Estado do serviço: '+state"></p>
+                    <p class="card-text" data-bind="text:'Dispositivo: '+marca"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Técnico Jorge Amado</li>
+                </ul>
+                <div class="card-body">
+                    <div class="mb-3"><button data-bind="click:function(contas, pedidos) {$parent.verificar(cliente)}" class="btn btn-warning d-block w-100" type="submit">Verificar Orçamento</button></div>
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: loja=='Inforlandia' -->
+            <div class="card" style="width: 20rem; margin: auto; margin-bottom: 10px; border: 2px solid black ">
+                <div class="card-body">
+                    <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>
+                    <p class="card-text" data-bind="text:'Estado do serviço: Em Espera'"></p>
+                    <p class="card-text" data-bind="text:'Dispositivo: '+marca"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Especialista Luís Campos</li>
+                </ul>
+                <div class="card-body">
+                    <div class="mb-3"><button data-bind="click:function(contas, pedidos) {$parent.verificar(cliente)}" class="btn btn-warning d-block w-100" type="submit">Verificar Orçamento</button></div>
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: loja=='Laser Net' -->
+            <div class="card" style="width: 20rem; margin: auto; margin-bottom: 10px; border: 2px solid black ">
+                <div class="card-body">
+                    <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>
+                    <p class="card-text" data-bind="text:'Estado do serviço: Em Espera '"></p>
+                    <p class="card-text" data-bind="text:'Dispositivo: '+marca"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Especialista Francisco Nabais</li>
+                </ul>
+                <div class="card-body">
+                    <div class="mb-3"><button data-bind="click:function(contas, pedidos) {$parent.verificar(cliente)}" class="btn btn-warning d-block w-100" type="submit">Verificar Orçamento</button></div>
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: loja=='MegaTec - Viseu' -->
+            <div class="card" style="width: 20rem; margin: auto; margin-bottom: 10px; border: 2px solid black ">
+                <div class="card-body">
+                    <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>
+                    <p class="card-text" data-bind="text:'Estado do serviço: Em Espera '"></p>
+                    <p class="card-text" data-bind="text:'Dispositivo: '+marca"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Técnico Pedro Lopes</li>
+                </ul>
+                <div class="card-body">
+                    <div class="mb-3"><button data-bind="click:function(contas, pedidos) {$parent.verificar(cliente)}" class="btn btn-warning d-block w-100" type="submit">Verificar Orçamento</button></div>
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: loja=='New Point' -->
+            <div class="card" style="width: 20rem; margin: auto; margin-bottom: 10px; border: 2px solid black ">
+                <div class="card-body">
+                    <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>
+                    <p class="card-text" data-bind="text:'Estado do serviço: Em Espera '"></p>
+                    <p class="card-text" data-bind="text:'Dispositivo: '+marca"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Técnico Alexandre Pascoal</li>
+                </ul>
+                <div class="card-body">
+                    <div class="mb-3"><button data-bind="click:function(contas, pedidos) {$parent.verificar(cliente)}" class="btn btn-warning d-block w-100" type="submit">Verificar Orçamento</button></div>
+                </div>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: loja=='TetoOnline - Viseu' -->
+            <div class="card" style="width: 20rem; margin: auto; margin-bottom: 10px; border: 2px solid black ">
+                <div class="card-body">
+                    <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>
+                    <p class="card-text" data-bind="text:'Estado do serviço: Em Espera '"></p>
+                    <p class="card-text" data-bind="text:'Dispositivo: '+marca"></p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Técnico Gonçalo Santos</li>
+                </ul>
+                <div class="card-body">
+                    <div class="mb-3"><button data-bind="click:function(contas, pedidos) {$parent.verificar(cliente)}" class="btn btn-warning d-block w-100" type="submit">Verificar Orçamento</button></div>
+                </div>
+            </div>
+            <!-- /ko -->
 
 
 
-    <h1>&nbsp; &nbsp; &nbsp;Em desenvolvimento...&nbsp;</h1>
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="modal fade" id="1" tabindex="-1" aria-labelledby="1" aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pedido">Não tem orçamento disponível atualmente!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="2" tabindex="-1" aria-labelledby="1" aria-hidden="true">
+        <div class="modal-dialog modal modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="pedido">Seu Orçamento</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <strong>Valor:</strong>
+                        <p data-bind="text: descp"></p>
+                        <strong>Para:</strong>
+                        <p data-bind="text: descorc"></p>
+                        <div class="row" style="margin-bottom:20px"><button type="button" data-bind="click: negar()" class="btn btn-warning" data-bs-dismiss="modal">Negar Orçamento.</button></div>
+                        <div class="row" style="margin-bottom:20px"><button type="button" data-bind="click: aceitar()" class="btn btn-warning" data-bs-dismiss="modal">Aceitar Orçamento e pagar.</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -47,6 +174,7 @@
             <div class="row col-4"><p class="text-muted mb-0">Fnak © 2022 Brand</p></div>
         </div>
     </div>
+    <script src="serviços.js"></script>
 </body>
 
 </html>

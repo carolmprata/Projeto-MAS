@@ -3,8 +3,9 @@ var vm = function () {
 
         console.log('ViewModel initiated...');
 
-        var self = this;
-        
+    var self = this;
+    self.id = ko.observable('1')
+    self.id2 = ko.observable('2')
     self.nome = ko.observable('');
     self.desc = ko.observable('');
     self.tel = ko.observable('');
@@ -13,50 +14,85 @@ var vm = function () {
     self.site = ko.observable('');
     self.morada = ko.observable('');
     self.email = ko.observable('');
+
       
     self.contas = {
-        "currentuser": [{ nome: '' }],
+        "currentuser": [{ nome: '', n: -1 }],
 
-        "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742' }],
+        "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742', ep: '', sa: '', ea: '', mp: '' }],
 
-        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', emailc: 'lojaaveiro@chip7.pt', tel: '234029174', msg: '', site: 'https://chip7.pt/', nome: 'CHIP 7 - Aveiro', desc: 'A CHIP7 disponibiliza uma vasta gama de produtos e serviços informáticos em mais de 65 lojas próximas de si.', horario: 'Segunda a sábado:10h00 às 13h00 e das 14h30 às 19h30;Domingos e Feriados:Encerrada', morada: ' Av Força Aerea, 77 3800-356, Aveiro' }],
-        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '' }]
+        'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', emailc: 'lojaaveiro@chip7.pt', tel: '234029174', msg: '', site: 'https://chip7.pt/', nome: 'CHIP 7 - Aveiro', desc: 'A CHIP7 disponibiliza uma vasta gama de produtos e servicos informaticos em mais de 65 lojas proximas de si.', horario: 'Segunda a sabado:10h00 as 13h00 e das 14h30 as 19h30;Domingos e Feriados:Encerrada', morada: ' Av Forca Aerea, 77 3800-356, Aveiro' }],
+        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '', orcdesc: "", orca: "", orcp: "", state: '' }]
 
     };
-
     var y = 0;
-    self.pagar = function () {
+    self.pagar1 = function () {
         if (y == 2) {
-            self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": $("#tipo").val(), "casa": $("#casa").val(), "cliente": self.contas.currentuser, "loja": $("#loja").text() });
-            console.log(self.contas);
-            window.localStorage.setItem('contas', JSON.stringify(self.contas))
+            if ($("#casa").is(":checked")) {
+                self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": "Mantainance", "casa": $("#casa").val(), "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                console.log(self.contas);
+                window.localStorage.setItem('contas', JSON.stringify(self.contas))
+                $("#pagar2").modal("hide");
+                $("#exampleModal2").modal("hide");
+            }
+            else {
+                self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": "Mantainance", "casa": "0", "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                console.log(self.contas);
+                window.localStorage.setItem('contas', JSON.stringify(self.contas))
+                $("#pagar2").modal("hide");
+                $("#exampleModal2").modal("hide");
+            }
         }
         else {y=y+1 }
      
 
     }
-    var x = 0;
-    self.pop = function () {
-        if (x == 2) {
-            if ($("#tipo :selected").val() == "Tele") {
-                console.log("d")
-                $("#preco").val("O preco base do seu pedido vai ficar a: 80 euros");
-                if ($("#casa").is(":checked")) {
-                    $("#preco").val("O preco base do seu pedido vai ficar a: 90 euros");
-                    $("#pagar").modal("show");
-                }
-                else { $("#pagar").modal("show"); }
+    var z = 0;
+    self.pagar2 = function () {
+        if (z == 2) {
+            if ($("#casa1").is(":checked")) {
+                self.contas.pedidos.push({ "problema": $("#problema1").val(), "marca": $("#marca1").val(), "tipo": "Mantaince", "casa": $("#casa1").val(), "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                console.log(self.contas);
+                window.localStorage.setItem('contas', JSON.stringify(self.contas))
+                $("#pagar2").modal("hide");
+                $("#exampleModal2").modal("hide");
             }
-            if ($("#tipo :selected").val() == "Computador") {
-                $("#preco").val("O preco base do seu pedido vai ficar a: 100 euros");
-                if ($("#casa").is(":checked")) {
-                    $("#preco").val("O preco base do seu pedido vai ficar a: 105 euros");
-                    $("#pagar").modal("show");
-                }
-                else { $("#pagar").modal("show"); }
+            else {
+                self.contas.pedidos.push({ "problema": $("#problema1").val(), "marca": $("#marca1").val(), "tipo": "Mantaince", "casa": "0", "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                console.log(self.contas);
+                window.localStorage.setItem('contas', JSON.stringify(self.contas))
+                $("#pagar2").modal("hide");
+                $("#exampleModal2").modal("hide");
             }
         }
-        else { x =x+1; }
+        else { z = z + 1 }
+
+
+    }
+    var w  = 0;
+    self.pop = function (r) {
+        if (w == 2) {
+            var x = "#pagar" + String(r);
+            var t = "#preco" + String(r);
+            if ($("#tipo :selected").val() == "Tele") {
+                console.log("d")
+                $(t).val("O preco base do seu pedido vai ficar a: 80 euros");
+                if ($("#casa").is(":checked")) {
+                    $(t).val("O preco base do seu pedido vai ficar a: 90 euros");
+                    $(x).modal("show");
+                }
+                else { $(x).modal("show"); }
+            }
+            if ($("#tipo :selected").val() == "Computador") {
+                $(t).val("O preco base do seu pedido vai ficar a: 100 euros");
+                if ($("#casa").is(":checked")) {
+                    $(t).val("O preco base do seu pedido vai ficar a: 105 euros");
+                    $(x).modal("show");
+                }
+                else { $(x).modal("show"); }
+            }
+        }
+        else { w =w+1; }
     };
 
 

@@ -3,7 +3,8 @@ var vm = function () {
 
         console.log('ViewModel initiated...');
 
-        var self = this;
+    var self = this;
+    self.pedidos = ko.observableArray([]);
     self.contas = {
         "currentuser": [{ nome: '', n: -1 }],
 
@@ -16,9 +17,9 @@ var vm = function () {
 
 
 
-
+        
     
-
+        
 
 
         self.loadcontas = function () {
@@ -32,9 +33,14 @@ var vm = function () {
                 localStorage.setItem('contas', JSON.stringify(self.contas));
 
             };
-
-
-
+            var temp = [];
+            for (i = 0; i < self.contas.pedidos.length; i++) {
+                if (self.contas.pedidos[i].loja == "CHIP 7 - Aveiro") {
+                    temp.push(self.contas.pedidos[i])
+                }
+            }
+            self.pedidos(temp);
+            
 
          }
         self.loadcontas();
@@ -44,6 +50,41 @@ var vm = function () {
     var para = '0';
     var erro = '0';
     var pop = '0';
+    var orccurrent = '';
+    self.guardar = function (nome) {
+        console.log(nome)
+        for (i = 0; i < self.contas.pedidos.length; i++) {
+            if (self.contas.pedidos[i].cliente == nome) { 
+                self.contas.pedidos[i].state = $('#'+nome+' :selected').val();;
+               
+            console.log(self.contas);
+            window.localStorage.setItem('contas', JSON.stringify(self.contas))
+            }
+        }
+    }
+    self.orcamento = function (nome) {
+        orccurrent = nome;
+        $("#1").modal('show');
+        orccurrent = nome;
+        
+    }
+    var l = 0;
+    self.lancar = function () {
+        console.log(orccurrent)
+        if (l != 0) {
+            for (i = 0; i < self.contas.pedidos.length; i++) {
+                if (orccurrent == self.contas.pedidos[i].cliente) {
+                    self.contas.pedidos[i].orca = '0';
+                    self.contas.pedidos[i].orcdesc = $("#desc").val();
+                    self.contas.pedidos[i].orcp = $("#preco").val();
+                    console.log(self.contas);
+                    window.localStorage.setItem('contas', JSON.stringify(self.contas))
+                    $("#1").modal('hide');
+                }
+            }
+        } else {l=1 }
+
+    }
 
 
 

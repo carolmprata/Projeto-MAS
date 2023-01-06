@@ -52,7 +52,7 @@
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">CHIP7</h1>
+                    <h1 class="modal-title fs-5" data-bind="text:nome" id="exampleModalLabel">CHIP7</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -78,15 +78,15 @@
                                         </div>
                                         <div class="col-6">
                                             <h5 class="card-title">Contactos</h5>
-                                            <p class="card-text"><i class="fa fa-location-arrow" aria-hidden="true"></i> Av Força Aerea, 77 3800-356, Aveiro</p>
-                                            <p class="card-text"><i class="fa fa-phone" aria-hidden="true"></i> 234029174</p>
-                                            <p class="card-text"><i class="fa fa-envelope" aria-hidden="true"></i> lojaaveiro@chip7.pt</p>
-                                            <p class="card-text">
+                                            <p class="card-text" data-bind="text:morada"><i class="fa fa-location-arrow" aria-hidden="true"></i> Av Força Aerea, 77 3800-356, Aveiro</p>
+                                            <p class="card-text" data-bind="text:tel"><i class="fa fa-phone" aria-hidden="true"></i> 234029174</p>
+                                            <p class="card-text" data-bind="text:email"><i class="fa fa-envelope" aria-hidden="true"></i> lojaaveiro@chip7.pt</p>
+                                            <p class="card-text" data-bind="text:hor">
                                                 <i class="fa fa-clock-o" aria-hidden="true"></i> <b>Horário:</b> <br> Segunda a sábado: <br> 10h00 às 13h00 e das 14h30 às 19h30 <br>
                                                 Domingos e Feriados: <br> Encerrada
                                             </p>
                                             <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="https://www.facebook.com/chip7aveiro" style="color:#f0ad4e" target="_blank"> Facebook</a></p>
-                                            <p><i class="fa fa-home" aria-hidden="true"></i><a href="https://chip7.pt/" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
+                                            <p><i class="fa fa-home" aria-hidden="true"></i><a data-bind="attr:{href:site}" style="color:#f0ad4e" target="_blank"> Site Oficial</a></p>
                                         </div>
                                     </div>
 
@@ -100,6 +100,7 @@
 
                 </div>
                 <div class="modal-footer">
+                    <a href="Chip7.html" class="button btn btn-warning btn-sm" style="float: left;"><i class="fa fa-eye" aria-hidden="true"></i> Saber Mais</a>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -629,7 +630,7 @@
             }
         }
     </script>
-    <script src="lojas.js"></script>
+    <script src="checkarlogin1.js"></script>
 </body>
 
 </html>
