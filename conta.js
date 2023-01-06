@@ -41,7 +41,7 @@ var vm = function () {
     self.updatecontas = function () {
 
         if ($("#email").val() != '' && $("#password").val() != '') {
-            self.contas.cliente.push({ "email": $("#email").val(), "pass": $("#password").val(), "nome": $("#nome").val(), "tel": $("#tele").val(),"ep":"","sa":"","ea":"","mp":"" });
+            self.contas.cliente.push({ "email": $("#email").val(), "pass": $("#password").val(), "nome": $("#nome").val(), "tel": $("#tele").val(), "ep": "0", "sa": "0", "ea": "0", "mp": "0", "msg": "" });
             window.location.href = window.location.href.replace("criarconta.html", "Login.html");
         }
         if ($("#email").val() == '' && $("#password").val() == '') {

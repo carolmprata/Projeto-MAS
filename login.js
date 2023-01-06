@@ -2,7 +2,7 @@
 var vm = function () {
 
         console.log('ViewModel initiated...');
-
+        
         var self = this;
         
     self.contas = {
@@ -48,37 +48,31 @@ var vm = function () {
     self.contas.currentuser[0].nome = '';
     self.login = function () {
         
+        
 
-            for (i = 0; i < self.contas.cliente.length; i++) {
-
+        for (i = 0; i < self.contas.cliente.length; i++) {
                 if (self.contas.cliente[i].email == $("#email").val() && self.contas.cliente[i].pass == $("#password").val()) {
                     self.contas.currentuser[0].nome = self.contas.cliente[i].nome;
                     window.localStorage.setItem('contas', JSON.stringify(self.contas))
                     window.location.href = window.location.href.replace("Login.html","lojas.html")
                 }
-                if (self.contas.loja[i].email == $("#email").val() && self.contas.loja[i].pass == $("#password").val()) {
-                    window.location.href = window.location.href.replace("Login.html", "criarloja.html")
-                }
+                
                 if (self.contas.cliente[i].email != $("#email").val() || self.contas.cliente[i].pass != $("#password").val()) {
                     if (pop == '1') {
                         $("#erro").modal('show');
                     }
                     erro = '1';
                 }
-                if (self.contas.loja[i].email != $("#email").val() || self.contas.loja[i].pass != $("#password").val()) {
-                    if (pop == '1') {
-                        $("#erro").modal('show');
-                    }
-                    erro = '1';
-                }
-                    
 
-            }
+        }
             if (erro == '1') {
                 pop = '1';
             }
-
+        if (self.contas.loja[0].email == $("#email").val() && self.contas.loja[i].pass == $("#password").val()) {
+            window.location.href = window.location.href.replace("Login.html", "criarloja.html")
         }
+    }
+
 
 
 
