@@ -68,7 +68,7 @@ var vm = function () {
             if (erro == '1') {
                 pop = '1';
             }
-        if (self.contas.loja[0].email == $("#email").val() && self.contas.loja[i].pass == $("#password").val()) {
+        if (self.contas.loja[0].email == $("#email").val() && self.contas.loja[0].pass == $("#password").val()) {
             window.location.href = window.location.href.replace("Login.html", "criarloja.html")
         }
     }
