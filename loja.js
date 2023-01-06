@@ -22,21 +22,22 @@ var vm = function () {
         "cliente": [{ email: 'gui@mail.com', pass: '123', msg: [''], nome: 'Guilherme', tel: '9865742', ep: '', sa: '', ea: '', mp: '' }],
 
         'loja': [{ email: 'Chip7@gmail.com', pass: 'infotech', emailc: 'lojaaveiro@chip7.pt', tel: '234029174', msg: '', site: 'https://chip7.pt/', nome: 'CHIP 7 - Aveiro', desc: 'A CHIP7 disponibiliza uma vasta gama de produtos e servicos informaticos em mais de 65 lojas proximas de si.', horario: 'Segunda a sabado:10h00 as 13h00 e das 14h30 as 19h30;Domingos e Feriados:Encerrada', morada: ' Av Forca Aerea, 77 3800-356, Aveiro' }],
-        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '', orcdesc: "", orca: "", orcp: "", state: '' }]
+        "pedidos": [{ tipo: '', cliente: '', problema: '', marca: '', casa: '', loja: '', orcdesc: "", orca: "", orcp: "", state: '', now: '' }]
 
     };
+
     var y = 0;
     self.pagar1 = function () {
         if (y == 2) {
             if ($("#casa").is(":checked")) {
-                self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": "Mantainance", "casa": $("#casa").val(), "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": "Mantainance", "casa": $("#casa").val(), "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "", "now":"" });
                 console.log(self.contas);
                 window.localStorage.setItem('contas', JSON.stringify(self.contas))
                 $("#pagar2").modal("hide");
                 $("#exampleModal2").modal("hide");
             }
             else {
-                self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": "Mantainance", "casa": "0", "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                self.contas.pedidos.push({ "problema": $("#problema").val(), "marca": $("#marca").val(), "tipo": "Mantainance", "casa": "0", "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "", "now": "" });
                 console.log(self.contas);
                 window.localStorage.setItem('contas', JSON.stringify(self.contas))
                 $("#pagar2").modal("hide");
@@ -51,14 +52,14 @@ var vm = function () {
     self.pagar2 = function () {
         if (z == 2) {
             if ($("#casa1").is(":checked")) {
-                self.contas.pedidos.push({ "problema": $("#problema1").val(), "marca": $("#marca1").val(), "tipo": "Mantaince", "casa": $("#casa1").val(), "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                self.contas.pedidos.push({ "problema": $("#problema1").val(), "marca": $("#marca1").val(), "tipo": "Mantaince", "casa": $("#casa1").val(), "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "", "now": "" });
                 console.log(self.contas);
                 window.localStorage.setItem('contas', JSON.stringify(self.contas))
                 $("#pagar2").modal("hide");
                 $("#exampleModal2").modal("hide");
             }
             else {
-                self.contas.pedidos.push({ "problema": $("#problema1").val(), "marca": $("#marca1").val(), "tipo": "Mantaince", "casa": "0", "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "" });
+                self.contas.pedidos.push({ "problema": $("#problema1").val(), "marca": $("#marca1").val(), "tipo": "Mantaince", "casa": "0", "cliente": self.contas.currentuser[0].nome, "loja": $("#loja").text(), "state": "Em Espera", "orcdesc": "", "orca": "", "orcp": "", "now": "" });
                 console.log(self.contas);
                 window.localStorage.setItem('contas', JSON.stringify(self.contas))
                 $("#pagar2").modal("hide");
