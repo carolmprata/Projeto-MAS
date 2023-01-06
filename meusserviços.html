@@ -34,7 +34,7 @@
     </nav>
     <div class="container">
         <div class="row col-12" data-bind="foreach:pedidos">
-            <!-- ko if: loja=="CHIP 7 - Aveiro" -->
+            <!-- ko if: loja==now -->
             <div class="card" style="width: 20rem; margin:auto; margin-bottom:10px; border:2px solid black">
                 <div class="card-body">
                     <h5 style="color: rgb(252, 179, 0);" class="card-title" data-bind="text: tipo+' '+loja"></h5>

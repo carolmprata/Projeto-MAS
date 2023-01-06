@@ -7,7 +7,7 @@ var vm = function () {
     self.pedidos = ko.observableArray([]);
     self.descorc = ko.observable('');
     self.descp = ko.observable('');
-
+    self.now = ko.observable('');
     self.contas = {
         "currentuser": [{ nome: '', n: -1 }],
 
@@ -74,12 +74,15 @@ var vm = function () {
 
             };
             var temp = [];
+            self.now(self.contas.loja[0].nome);
             for (i = 0; i < self.contas.pedidos.length; i++) {
                 if (self.contas.pedidos[i].cliente == self.contas.currentuser[0].nome) {
                     temp.push(self.contas.pedidos[i])
+                    temp[i].now = self.now();
                 }
             }
             self.pedidos(temp);
+            
             
 
          }
