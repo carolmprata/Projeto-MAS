@@ -77,8 +77,8 @@ var vm = function () {
             self.now(self.contas.loja[0].nome);
             for (i = 0; i < self.contas.pedidos.length; i++) {
                 if (self.contas.pedidos[i].cliente == self.contas.currentuser[0].nome) {
+                    self.contas.pedidos[i].now = self.now();
                     temp.push(self.contas.pedidos[i])
-                    temp[i].now = self.now();
                 }
             }
             self.pedidos(temp);
