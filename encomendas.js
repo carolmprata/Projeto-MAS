@@ -35,7 +35,7 @@ var vm = function () {
             };
             var temp = [];
             for (i = 0; i < self.contas.pedidos.length; i++) {
-                if (self.contas.pedidos[i].loja == "CHIP 7 - Aveiro") {
+                if (self.contas.pedidos[i].loja == self.contas.loja[0].nome) {
                     temp.push(self.contas.pedidos[i])
                 }
             }
